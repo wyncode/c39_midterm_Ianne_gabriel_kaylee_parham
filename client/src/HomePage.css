@@ -1,0 +1,8 @@
+.HomePageBody{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    height: 100vh;
+    background-image: url('./images/pokemon.png');
+    background-size: 100%;
+    }
