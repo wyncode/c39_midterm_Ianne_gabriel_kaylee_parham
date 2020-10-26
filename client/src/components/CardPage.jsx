@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './CardPage.css';
 import axios from 'axios';
+import NavBar from './NavBar'
 
 const CardPage = ()=>{
     const[apiData, setApiData]= useState({});
@@ -15,6 +16,8 @@ const CardPage = ()=>{
     fetchData()
     }, []);
     return ( 
+        <>
+        <NavBar />
     <body className="main">
        <img className="cardboxlogo" src={"https://cdn2.iconfinder.com/data/icons/pokemon-outline/64/pokeball-people-pokemon-nintendo-video-game-gaming-gartoon-ball-512.png"}/>
        <h2 className="editor">Editor's Pick!</h2>
@@ -46,6 +49,7 @@ const CardPage = ()=>{
             <img className="item" src={"https://images.pokemontcg.io/gym2/29_hires.png"}/>
         </div>      
     </body>
+    </>
     );
 };
 
