@@ -1,0 +1,125 @@
+.HomePageBody {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-image: url("./Images/pokemon.png");
+    background-size: 100%;
+    font-family: 'Pokemon';
+    letter-spacing: 2px;
+}
+
+   .openButton {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    background:url(./Images/pokeball1.png) no-repeat;
+    cursor:pointer;
+    border:5px solid black;
+    width:20rem;
+    height:20rem;
+    border-radius: 50%;
+}
+
+.suggestions{
+    position: absolute;
+    right: 3.5%;
+    top: 2%;  
+}
+
+.psyPokemon{
+    cursor: pointer;
+}
+
+.grassPokemon{
+    cursor: pointer;
+}
+
+.letter{
+    display: inline-block;
+    position: absolute;
+    top: 15%;
+    left: 13%;
+    font-size: 6rem;
+    transform-origin: bottom center;
+}
+
+span {
+    transform: scale(0.9);
+    display: inline-block;
+}
+
+span:first-child {
+    animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite
+      alternate;
+}
+
+span:last-child {
+    animation: bopB 1s 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+      infinite alternate;
+}
+
+span {
+    animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+      infinite alternate;
+}
+
+@keyframes bop {
+  0% {
+    transform: scale(0.9);
+  }
+  50%,
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bopB {
+  0% {
+    transform: scale(0.9);
+  }
+  80%,
+  100% {
+    transform: scale(1) rotateZ(-3deg);
+  }
+}
+
+.icon-bar {
+    position: fixed;
+    top: 45%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+  
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 30px;
+}
+  
+  .icon-bar a:hover {
+    background-color: red;
+}
+  
+  .facebook {
+    color: white;
+}
+  
+  
+  .twitter {
+    color: white;
+}
+  
+  .instagram {
+    color: white;
+  
+}
+  .youtube {
+    color: white;
+}
+
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+
