@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap);
+@import url(https://db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+@import url(//db.onlinewebfonts.com/c/831e1f4da157d96bc996f8c9f5f1e578?family=Pokemon+GB);
+
+.main{
+background-color: #e63946;
+width: 100vw;
+height: 100vh;
+}
+
+.cardbox{
+display: flex;
+position: absolute;
+left: 25%;
+top: 20%;
+background-color: whitesmoke;
+width: 850px;
+height:500px;
+border-radius: 4%;
+padding: 10px;
+border: 5px solid black;
+}
+
+.card{
+width: 320px;
+padding: 15px;
+}
+
+.cardinfo{
+list-style-type: none;
+background-color: lightgray;
+padding: 15px;
+border-radius: 4%;
+font-family: 'Orbitron', sans-serif;
+letter-spacing: 2px; 
+}
+
+.logo{
+display: flex;
+position: absolute;
+font-size: 40px;
+padding: 10px;
+border-radius: 8%;
+left: 20px;
+font-family: 'Pokemon';
+letter-spacing: 4px; 
+color: white;
+}
+
+.searchbar{
+display: flex;
+position: absolute;
+padding: 10px;
+left: 84%;
+bottom: 90%;
+background-color: black;
+}
+
+.icon{
+display: flex;
+position: absolute;
+left: 90vw;
+width: 60%;
+padding: 20px;
+}
+
+.wrapper{
+display: flex;
+position: absolute;
+margin-top: 800px;
+left: 600px;
+right: 950px;
+overflow: hidden;
+justify-content: center;
+border: 5px groove black;
+background-color: white;
+border-radius: 3%;
+}
+
+.wrapper .item{
+width: 20%;
+height: 250px;
+padding: 7px;
+background-color:lightgray;
+border: 3px solid gray;
+}
+
+.cardboxlogo{
+display: flex;
+position: absolute;
+width: 300px;
+margin-left: 15%;
+margin-top: 5%;
+}
+.editor{
+display: flex;
+position: absolute;
+color: black;
+font-family: 'Pokemon+GB';
+letter-spacing: 1px; 
+margin-left: 575px;
+margin-right: 500px;
+margin-top: 780px;
+background-color: whitesmoke;
+margin-bottom: 300px;
+padding: 5px;
+border-radius: 15%;
+border: 5px groove black;
+z-index: 1;
+}
+
