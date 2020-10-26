@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Card = () => {
+const Card = (props) => {
     return (
         <div className="container">
-            <img alt="blastoise" src={"https://images.pokemontcg.io/base5/20_hires.png"}/>
+            <img alt="blastoise" src={props.image}/>
             <div className="middle">
-            <h1 className="text"> BLASTOISE </h1>
+    <h1 className="text"> {props.name}</h1>
             </div>
         </div>
     )
