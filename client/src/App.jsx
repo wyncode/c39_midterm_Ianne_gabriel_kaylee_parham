@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
-// import './ianne.css';
+
 import Search from "./components/SearchPage"
 import './SearchPage.css'
-// import './App.css';
+import './HomePage.css';
+import './App.css';
+import HomePage from './components/HomePage';
 
 const App = () => {
-
   return (
-    <Search />
+    <div>
+      <HomePage/>
+      <Search />
+    </div>
   );
 };
 
