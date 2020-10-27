@@ -7,17 +7,21 @@ import axios from "axios"
 const Search = () => {
     //state variable 
     const [api, setApi] = useState({})
+    const [search, setSearch] = useState("")
+
+    //handleChange
+    const handleChange = (event) => {
+        setSearch(event.target.value)
+    }
     //use effect 
     useEffect( ()=>{
         const getMe = async () => {
-            const response = await axios.get("https://api.pokemontcg.io/v1/cards?name=charizard")
-            //axios alreadxy converts to JSON, but we need to pull from the data 
+            const response = await axios.get(`https://api.pokemontcg.io/v1/cards?name=${search}`)
             const { data } = response
             setApi(data)
-            // console.log(data)
         }
         getMe()
-    }, [api] )
+    }, [search] )
 
     return (
     <>
@@ -26,7 +30,7 @@ const Search = () => {
             <main>
             <h2> Gotta Catch 'Em All </h2>
              <form>
-                <input className="search-input" onChange={(e) => console.log(e.target.value)}/>
+                <input className="search-input" onChange={handleChange}/>
                 <ul> 
                     <div className="dropdown">
                     <h3 className="drop-heading"> Type</h3>
