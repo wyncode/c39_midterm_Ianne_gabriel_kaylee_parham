@@ -1,17 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 //need to add browser router DOM 
 //need to add link tags around the li 
 
 const NavBar = () => {
     return (
         <ul className="nav">
-            <li className="nav-icon"> PokeCardex </li>
-            <li> About </li>
-            <li> Thing 1  </li>
-            <li> Thing 2 </li>
+            <Link to="/"> <li className="nav-icon"> PokeCardex </li></Link> 
+            <Link to="/about"> <li> About </li></Link>
+            <Link to="/searcht"> <li> About </li></Link>
         </ul>
     )
 
 }
 
-export default NavBar
+export default NavBargit
