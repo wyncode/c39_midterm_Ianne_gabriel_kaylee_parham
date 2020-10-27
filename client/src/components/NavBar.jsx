@@ -5,7 +5,7 @@ import React from 'react'
 const NavBar = () => {
     return (
         <ul className="nav">
-            <li className="icon"> PokeCardex </li>
+            <li className="nav-icon"> PokeCardex </li>
             <li> About </li>
             <li> Thing 1  </li>
             <li> Thing 2 </li>
