@@ -46,7 +46,9 @@ const Search = ({ history }) => {
             </form>
                 <section>
                     <div className="card-container"> 
-                    { api.cards && api.cards.map(card => <Card key={card.id} name={card.name} image={card.imageUrl} />)
+                    { api.cards && api.cards.map(card => {
+                    console.log(card.id)
+                    return <Card id={card.id} name={card.name} image={card.imageUrl} />})
                     }
                     </div>
                 <EditorPick />
