@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
     return (
         <ul className="nav">
-            <Link to="/"> <li className="nav-icon"> PokeCardex </li></Link> 
-            <Link to="/about"> <li> About </li></Link>
-            <Link to="/searcht"> <li> About </li></Link>
+             <li className="nav-icon"> <Link style={{textDecoration: 'none', color:'white'}}to="/"> PokeCardex </Link>  </li>
+             <li><Link style={{textDecoration: 'none', color:'white'}} to="/search">  Home </Link> </li> 
+             <li><Link style={{textDecoration: 'none', color:'white'}} to="/about">  About </Link> </li>
+            
         </ul>
     )
 
 }
 
-export default NavBargit
+export default NavBar
