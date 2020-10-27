@@ -6,24 +6,31 @@
 background-color: #e63946;
 width: 100vw;
 height: 100vh;
+background-image: url("./../Images/cardbg.png");
+background-size: cover;
 }
 
 .cardbox{
 display: flex;
 position: absolute;
 left: 25%;
-top: 20%;
+top: 9%;
 background-color: whitesmoke;
-width: 850px;
+width: 40%;
 height:500px;
 border-radius: 4%;
 padding: 10px;
 border: 5px solid black;
+max-width: 720px;
+box-shadow: 10px 5px 5px darkred;
 }
 
 .card{
-width: 320px;
-padding: 15px;
+display: flex;
+position: relative;
+width: 350px;
+height: 500px;
+padding: 2px;
 }
 
 .cardinfo{
@@ -35,77 +42,63 @@ font-family: 'Orbitron', sans-serif;
 letter-spacing: 2px; 
 }
 
-.logo{
-display: flex;
-position: absolute;
-font-size: 40px;
-padding: 10px;
-border-radius: 8%;
-left: 20px;
-font-family: 'Pokemon';
-letter-spacing: 4px; 
-color: white;
-}
-
-.searchbar{
-display: flex;
-position: absolute;
-padding: 10px;
-left: 84%;
-bottom: 90%;
-background-color: black;
-}
-
-.icon{
-display: flex;
-position: absolute;
-left: 90vw;
-width: 60%;
-padding: 20px;
-}
-
 .wrapper{
 display: flex;
 position: absolute;
-margin-top: 800px;
-left: 600px;
-right: 950px;
-overflow: hidden;
+top: 700px;
+left: 25%;
+height: 210px;
+overflow-x: scroll;
 justify-content: center;
 border: 5px groove black;
-background-color: white;
 border-radius: 3%;
+min-width: 700px;
+max-width: 700px;
+box-shadow: 10px 5px 5px gray;
 }
 
 .wrapper .item{
-width: 20%;
-height: 250px;
-padding: 7px;
-background-color:lightgray;
-border: 3px solid gray;
+display: flex;
+justify-content: space-around;
+width: 150px;
+height: 190px;
+padding: 1px;
+object-fit: contain;
 }
+.wrapper .item:hover{
+    display: flex;
+    justify-content: space-around;
+    width: 450px;
+    height: 490px;
+    padding: 2px;
+    box-shadow: 10px 5px 5px black;
+    z-index: 1;
+    }
 
 .cardboxlogo{
 display: flex;
 position: absolute;
-width: 300px;
+width: 200px;
+height: 200px;
 margin-left: 15%;
-margin-top: 5%;
+margin-top: 60px;
 }
 .editor{
 display: flex;
 position: absolute;
 color: black;
-font-family: 'Pokemon+GB';
+font-family: 'Orbitron', sans-serif;
 letter-spacing: 1px; 
-margin-left: 575px;
-margin-right: 500px;
-margin-top: 780px;
+left: 25%;
+top:  630px;
+min-width: 200px;
 background-color: whitesmoke;
 margin-bottom: 300px;
 padding: 5px;
 border-radius: 15%;
 border: 5px groove black;
 z-index: 1;
+box-shadow: 10px 5px 5px black;
 }
+
 
