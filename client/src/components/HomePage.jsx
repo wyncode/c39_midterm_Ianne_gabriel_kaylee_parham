@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 
-function HomePage() {
+function HomePage({ history }) {
     const [venaData, setVenaData] = useState({});
     const [duckData, setDuckData] = useState({});
     const [genData, setGenData] = useState({});
@@ -39,18 +39,22 @@ function HomePage() {
       };
        fetchData2();
     }, []);
+
+    const handleClick = () => {
+      history.push("/search");
+    };
   return (
           <body className="HomePageBody">
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <div className="HomePageTitle">
               <h1 className='letter'><span>POKE</span><span>CARD</span><span>EX</span></h1>
-              <button className='openButton'></button>
+              <button className='openButton'onClick = {handleClick}></button>
             </div>
             <div className='suggestions'>
-                <ul className='suggestedPowers'>
-                    <p className='powerType' ><button className ='psyPokemon'><img src={(duckData.card && duckData.card.imageUrl)}></img></button></p> 
-                    <p className='powerType' ><button className ='grassPokemon'><img src={(venaData.card && venaData.card.imageUrl)}></img></button></p> 
-                </ul>
+                <div className='suggestedPowers'>
+                    <h1 className='powerType' ><button className ='psyPokemon'><img src={(duckData.card && duckData.card.imageUrl)}></img></button></h1> 
+                    <h1 className='powerType' ><button className ='grassPokemon'><img src={(venaData.card && venaData.card.imageUrl)}></img></button></h1> 
+                </div> 
             </div>
             <div class="icon-bar">
                 <a href="https://www.facebook.com/Pokemon/" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -58,9 +62,14 @@ function HomePage() {
                 <a href="https://www.instagram.com/pokemon/?hl=en" class="instagram"><i class="fa fa-instagram"></i></a>
                 <a href="https://www.youtube.com/channel/UCFctpiB_Hnlk3ejWfHqSm6Q" class="youtube"><i class="fa fa-youtube"></i></a>
             </div>
+            <div className="music">
+              {/* <audio controls="controls" autoplay preload='auto' loop id="myAudio">
+              <source src="Pokémon Theme Song.mp3" type="audio/mpeg" /></audio> */}
+                {/* <audio controls="controls"><source src="Pokémon Theme Song.mp3" type="audio/mpeg" /></audio> */}
+            </div>
           </body>
         );
-      }
+  }
       
       export default HomePage;
     

@@ -1,0 +1,143 @@
+.AboutMainBody{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("./Images/red\ and\ blue.jpg");
+    background-size: 100%;
+    font-family: 'Pokemon Hollow';
+    color: white;
+    letter-spacing: 5px;
+}
+
+.aboutTitle{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+.theWorkers{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:100%;
+    justify-content: center;
+}    
+
+.kaylee {
+    display: flex;
+    height: 25rem;
+    width: 20rem;
+    border: solid 1px #3D7DCA;
+    background-image: url("./Images/Headshot.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    margin: 3rem;
+    color: white;
+    flex-direction: column;
+}
+.kaylee:hover{
+    transition: ease-in;
+    transition-duration: 1s;
+    background-image: url('./Images/blue\ and\ red.jpg');
+}
+.k{
+    opacity: 0;
+    font-size: 1.25rem;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.k:hover{
+    display: flex;
+    transition: ease-in;
+    transition-duration: 1s;
+    opacity: 1;
+    font-family: 'pokemon';
+    letter-spacing: 5px;
+    line-height: 2rem;
+}
+ 
+.ianne{
+    display: flex;
+    height: 25rem;
+    width: 20rem;
+    border: solid 1px #3D7DCA;
+    background-image: url("./Images/ianne.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    margin: 3rem;
+    color: white;
+    flex-direction: column;
+}
+
+.ianne:hover{
+    transition: ease-in;
+    transition-duration: 1s;
+    background-image: url('./Images/blue\ and\ red.jpg');
+}
+.i{
+    opacity: 0;
+    font-size: 1.25rem;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.i:hover{
+    display: flex;
+    transition: ease-in;
+    transition-duration: 1s;
+    opacity: 1;
+    font-family: 'pokemon';
+    letter-spacing: 5px;
+    line-height: 2rem;
+}
+.ourTypes{
+    list-style: none;
+    line-height: 2.25rem;
+}
+.gabriel{
+    display: flex;
+    height: 25rem;
+    width: 20rem;
+    border: solid 1px #3D7DCA;
+    background-image: url("./Images/gabriel.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    margin: 3rem;
+    color: white;
+    flex-direction: column;
+}
+
+.gabriel:hover{
+    transition: ease-in;
+    transition-duration: 1s;
+    background-image: url('./Images/blue\ and\ red.jpg');
+}
+.g{
+    opacity: 0;
+    font-size: 1.25rem;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.g:hover{
+    display: flex;
+    transition: ease-in;
+    transition-duration: 1s;
+    opacity: 1;
+    font-family: 'pokemon';
+    letter-spacing: 5px;
+    line-height: 2rem;
+}
+
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+@import url(//db.onlinewebfonts.com/c/831e1f4da157d96bc996f8c9f5f1e578?family=Pokemon+GB);
+@import url(//db.onlinewebfonts.com/c/6e5393a64ca23c455e8568d409e82da6?family=Pokemon+Hollow);
+@import url(//db.onlinewebfonts.com/c/36d26dbcd032a9d91d891c9f22dfdec6?family=Pokemon+Solid);
