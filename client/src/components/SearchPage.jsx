@@ -4,7 +4,7 @@ import NavBar from './NavBar'
 import EditorPick from "./EditorPick"
 import axios from "axios"
 
-const Search = () => {
+const Search = ({ history }) => {
     //state variable 
     const [api, setApi] = useState({})
     //use effect 
