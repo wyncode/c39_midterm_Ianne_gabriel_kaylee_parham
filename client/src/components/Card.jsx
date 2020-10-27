@@ -3,7 +3,7 @@ import React from 'react'
 const Card = (props) => {
     return (
         <div className="container">
-            <a href={`/card/${key}`}>
+            <a href={`/card/${props.key}`}>
                 <img alt="blastoise" src={props.image}/>
             </a>
             <div className="middle">
