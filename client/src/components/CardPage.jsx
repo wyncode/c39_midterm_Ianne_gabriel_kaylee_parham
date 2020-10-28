@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import './CardPage.css';
 import axios from 'axios';
 import NavBar from './NavBar'
 
 const CardPage = ()=>{
     const[apiData, setApiData]= useState({});
-    let id = "ex14-28"
+    let { id } =useParams()
+
 
     useEffect(() => {
     const fetchData = async () => {
        let response = await axios.get(`https://api.pokemontcg.io/v1/cards/${id}`)
        setApiData(response.data.card)
-    //    console.log(response)
     }
     fetchData()
 }, []);
