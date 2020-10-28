@@ -16,7 +16,14 @@ const CardPage = ()=>{
     fetchData()
 }, []);
 
-let echoice = ["xy0-14","xy7-4","pl2-103","dp6-90","dp1-6","xy0-28","xy0-29","xy0-30","det1-6","col1-4","base1-49","base6-3","gym2-29","base4-2","bw4-25","base4-10","hgss1-4","swsh2-25","sm10-158","hgss1-82","swsh2-85","pl3-70","ex1-7","dp2-102"]
+let echoice = ["xy0-14","xy7-4","pl2-103","dp6-90","dp1-6",
+"xy0-28","xy0-29","xy0-30","det1-6","col1-4","base1-49","base6-3",
+"gym2-29","base4-2","bw4-25","base4-10","hgss1-4","swsh2-25","sm10-158",
+"hgss1-82","swsh2-85","pl3-70","ex1-7","dp2-102","bw11-19","neo3-6","dp5-14",
+"dp6-2","gym1-29","sm11-55","bw9-20","ex2-24","ecard3-12","hgss2-37","xy3-62","sm4-3",
+"xy9-30","ecard1-62","xy8-55","xyp-XY161","dp5-7","base2-19","bw5-66","xy6-37","swsh2-30",
+"dp1-122","det1-18","dp6-7","dp4-20","gym2-7","gym2-23","xy11-25","base6-33","neo2-20","base3-31",
+"sm115-21","bw11-RC3","hgss3-36","sm10-29"]
     
 
     const rando1 = echoice[Math.floor(Math.random() * echoice.length)];
