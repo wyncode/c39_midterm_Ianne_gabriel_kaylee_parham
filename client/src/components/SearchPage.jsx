@@ -3,60 +3,144 @@ import Card from './Card'
 import NavBar from './NavBar'
 import EditorPick from "./EditorPick"
 import axios from "axios"
+import Conditional from "./Conditional"
 
 const Search = ({ history }) => {
     //state variable 
-    const [api, setApi] = useState({})
-    const [search, setSearch] = useState("")
+    const [lookingAnswer, setAnswer] = useState("hello");
+    const [pokeType, setType] = useState("");
+    const [rarity, setRarity] = useState("");
+    const [subType, setSubType] = useState("");
+    const [api, setApi] = useState({});
+    const [search, setSearch] = useState("");
+    const [addition, setAddition] = useState(null);
 
-    //handleChange
-    const handleChange = (event) => {
-        setSearch(event.target.value)
-    }
-    //use effect 
-    useEffect( ()=>{
+    useEffect(() => {
         const getMe = async () => {
-            const response = await axios.get(`https://api.pokemontcg.io/v1/cards?name=${search}`)
-            const { data } = response
-            setApi(data)
+          const response = await axios.get(
+            `https://api.pokemontcg.io/v1/cards?supertype=${lookingAnswer}`
+          );
+          const { data } = response;
+          setApi(data);
+        };
+        getMe();
+      }, [lookingAnswer]);
+    
+      const handleValue = (event) => {
+        setAnswer(event.target.value);
+      };
+    
+      useEffect(() => {
+        if (!search && pokeType && rarity) {
+          setAddition(`&&types=${pokeType}&&rarity=${rarity}`);
+        } else if (search && pokeType && rarity) {
+          setAddition(`&&types=${pokeType}&&rarity=${rarity}&&name=${search}`);
+        } else if (search && pokeType) {
+          setAddition(`&&types=${pokeType}&&name=${search}`);
+        } else if (search && rarity) {
+          setAddition(`&&rarity=${rarity}&&name=${search}`);
+        } else if (!search && pokeType) {
+          setAddition(`&&types=${pokeType}`);
+        } else if (!search && rarity) {
+          setAddition(`&&rarity=${rarity}`);
+        } else if (search) {
+          setType("");
+          setRarity("");
+          setAddition(`&&name=${search}`);
+        } else if (subType && rarity) {
+          setAddition(`&&subtype=${subType}&&rarity=${rarity}`);
+        } else if (subType) {
+          setAddition(`&&subtype=${subType}`);
         }
-        getMe()
-    }, [search] )
-
-    return (
-    <>
-        <NavBar />
-        <div className="search-container"> 
+    
+        const getMe = async () => {
+          const response = await axios.get(
+            `https://api.pokemontcg.io/v1/cards?supertype=${lookingAnswer}${addition}`
+          );
+          const { data } = response;
+          setApi(data);
+        };
+        getMe();
+      }, [pokeType, rarity, search, lookingAnswer, addition, subType]);
+    
+      const handleChange = (event) => {
+        setSearch(event.target.value);
+      };
+      return (
+        <>
+        <NavBar/>
+        <div className="search-container">
             <main>
             <h2> Gotta Catch 'Em All </h2>
-             <form>
-                <input className="search-input" onChange={handleChange}/>
-                <ul> 
-                    <div className="dropdown">
-                    <h3 className="drop-heading"> Type</h3>
-                        <div className="dropdown-content">
-                            <label for=""> <input type="radio" value=""/> Water </label>
-                            <label for=""> <input type="radio" value=""/> Fire </label>
-                            <label for=""> <input type="radio" value=""/> Electric </label>
-                            <label for=""> <input type="radio" value=""/> Grass </label>
-                            <div className="spanBtn" for=""> <input type="submit"/> </div>
-                        </div>
-                    </div>
-                </ul>
-            </form>
-                <section>
-                    <div className="card-container"> 
-                    { api.cards && api.cards.map(card => {
-                    console.log(card.id)
-                    return <Card id={card.id} name={card.name} image={card.imageUrl} />})
-                    }
-                    </div>
-                <EditorPick />
-                </section>
-            </main>
-        </div>
-         
-         </>)
-}
+            <form>
+                <ul>
+          <div className="dropdown" id="dropMain">
+            <h3 className="drop-heading" id="dropMainHead">
+              {" "}
+              What are you looking for today?
+            </h3>
+            <div className="dropdown-content" name="looking">
+              <label htmlFor="">
+                {" "}
+                <input
+                  type="radio"
+                  value="Pokemon"
+                  name="looking"
+                  checked={lookingAnswer === "Pokemon"}
+                  onChange={handleValue}
+                />{" "}
+                Pokemon{" "}
+              </label>
+              <label htmlFor="">
+                {" "}
+                <input
+                  type="radio"
+                  value="Energy"
+                  name="looking"
+                  checked={lookingAnswer === "Energy"}
+                  onChange={handleValue}
+                />{" "}
+                Energy{" "}
+              </label>
+              <label htmlFor="">
+                {" "}
+                <input
+                  type="radio"
+                  value="Trainer"
+                  name="looking"
+                  checked={lookingAnswer === "Trainer"}
+                  onChange={handleValue}
+                />{" "}
+                Trainer{" "}
+              </label>
+              <div className="spanBtn" htmlFor="">
+                {" "}
+                <input type="submit" name="looking" />{" "}
+              </div>
+            </div>
+          </div>
+          <Conditional
+            value={lookingAnswer}
+            setType={setType}
+            setRarity={setRarity}
+            setSubType={setSubType}
+            handleChange={handleChange}
+          />
+          </ul>
+          </form>
+          <section>
+            <div className="card-container">
+              {api.cards &&
+                api.cards.map((card) => (
+                  <Card key={card.id} id={card.id} name={card.name} image={card.imageUrl} />
+                ))}
+            </div>
+            <EditorPick />
+          </section>
+          </main>
+          </div>
+        </>
+      );
+    }
 
 export default Search
