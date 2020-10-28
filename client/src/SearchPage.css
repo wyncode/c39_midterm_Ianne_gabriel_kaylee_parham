@@ -29,9 +29,10 @@ body {
   font-size: 1.7em;
 }
 
-li {
-    margin: 0em 1em 0em 0em;
+.nav li {
+    margin: 0em 1em 0em 1em;
 }
+
 
 
 /* GRID ATTEMPT */
