@@ -143,7 +143,7 @@ const Search = ({ history }) => {
                   <Card key={card.id} id={card.id} name={card.name} image={card.imageUrl} />
                 ))}
             </div>
-            <EditorPick />
+            {/* <EditorPick /> */}
           </section>
           </main>
           </div>

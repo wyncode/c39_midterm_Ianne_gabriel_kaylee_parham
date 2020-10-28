@@ -9,6 +9,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 /* backup for nav bar */
 @import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
+/* backup for cards and hover drop */
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 /* Ianne's CSS */
 body {
@@ -21,13 +23,13 @@ body {
     display: flex;
     list-style-type: none;
     justify-content: flex-end;
-    align-items: center;
+    align-items: center; 
     padding: 0.5em 0.5em 0em 0px;
     color: white;
     border-bottom: solid black 2px;
     margin: 0;
-    background-color: #3D7DCA;
-    font-family: "Pokemon", 'Rubik Mono One', sans-serif;;
+    background-color: #003A70;
+    font-family: 'Rubik Mono One', sans-serif;;
     letter-spacing: 3px;
 }
 
@@ -63,7 +65,10 @@ main {
 
 main h1 {
   margin: 1em 0 0.25em 0;
-  font-family: "Pokemon Hollow","Pokemon", "Shojumaru", cursive ;
+  font-family: "Shojumaru", cursive ;
+  color: #FFCB05;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 15em;
   letter-spacing: 3px;
   font-size: 2.5em;
 }
@@ -104,11 +109,11 @@ form ul {
 #dropMain {
   position: relative;
   display: inline-block;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.7);
   border: solid #3D7DCA 3px;
   border-radius: 2px;
   font-size: 1em;
-  font-family: "Pokemon";
+  font-family: "Pokemon", "Staatliches";
   letter-spacing: 3px;
   padding: 0.5em;
 }
@@ -126,9 +131,10 @@ form ul {
   border: solid #ee1515 2px;
   background-color: white;
   font-size: 1em;
-  font-family: "Pokemon";
+  font-family: "Pokemon", "Staatliches";
   letter-spacing: 3px;
   margin: 0em 0.5em 0em 0.5em;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .drop-heading {
@@ -141,7 +147,7 @@ form ul {
   display: none;
   width: 15em;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.7);
   min-width: 3em;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -153,7 +159,7 @@ form ul {
 }
 
 label{
-  background-color: white;
+  background: rgba(255, 255, 255, 0.9);
   border: solid #FFDE00 2px;
   padding: 1em 1em;
 }
@@ -220,7 +226,7 @@ img {
     background-color: red;
     border-radius: 2px;
     color: white;
-    font-family: "Pokemon";
+    font-family: "Pokemon", "Staatliches";
     letter-spacing: 5px;
     font-size: 2rem;
     padding: 0.5em 1em;
