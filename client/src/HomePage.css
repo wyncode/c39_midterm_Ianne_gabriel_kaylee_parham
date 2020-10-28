@@ -63,6 +63,21 @@ span {
       infinite alternate;
 }
 
+audio{
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 24rem;
+  height: 1.5rem;
+  
+}
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  background-color: red;
+  color: #edeff1;
+  border-radius: 10;
+}
+
 @keyframes bop {
   0% {
     transform: scale(0.9);
