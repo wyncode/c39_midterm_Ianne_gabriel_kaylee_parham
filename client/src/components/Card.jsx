@@ -6,10 +6,10 @@ const Card = ({id, image, name}) => {
         <div className="container">
             <a href={`/card/${id}`}>
                 <img alt={name} src={image}/>
-            </a>
             <div className="middle">
                  <h1 className="text"> {name}</h1>
             </div>
+            </a>
         </div>
     )
 }
