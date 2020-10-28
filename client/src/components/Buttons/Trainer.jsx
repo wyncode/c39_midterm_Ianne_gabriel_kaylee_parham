@@ -47,10 +47,6 @@ const Trainer = (props) => {
             />{" "}
             Pokemon Tool{" "}
           </label>
-          <div className="spanBtn" htmlFor="">
-            {" "}
-            <input type="submit" name="looking" />{" "}
-          </div>
         </div>
       </div>
       <div className="dropdown">

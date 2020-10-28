@@ -61,10 +61,6 @@ const Pokemon = (props) => {
             />{" "}
             Grass{" "}
           </label>
-          <div className="spanBtn" htmlFor="">
-            {" "}
-            <input type="submit" name="looking" />{" "}
-          </div>
         </div>
       </div>
       {/* **************************** */}
@@ -117,7 +113,7 @@ const Pokemon = (props) => {
           </label>
         </div>
       </div>
-      <input className="search-input" onChange={props.handleChange} />
+      <input placeholder="Search by Name"className="search-input" onChange={props.handleChange} />
     </>
   );
 };

@@ -71,7 +71,7 @@ const Search = ({ history }) => {
         <NavBar/>
         <div className="search-container">
             <main>
-            <h2> Gotta Catch 'Em All </h2>
+            <h1> Gotta Catch 'Em All </h1>
             <form>
                 <ul>
           <div className="dropdown" id="dropMain">
@@ -113,10 +113,6 @@ const Search = ({ history }) => {
                 />{" "}
                 Trainer{" "}
               </label>
-              <div className="spanBtn" htmlFor="">
-                {" "}
-                <input type="submit" name="looking" />{" "}
-              </div>
             </div>
           </div>
           <Conditional
