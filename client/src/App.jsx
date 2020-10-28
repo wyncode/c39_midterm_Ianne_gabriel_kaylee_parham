@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-// import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import React from 'react';
 import CardPage from './components/CardPage';
 import Search from "./components/SearchPage"
 import './SearchPage.css'

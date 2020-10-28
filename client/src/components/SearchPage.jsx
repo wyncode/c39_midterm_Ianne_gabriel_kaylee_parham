@@ -6,7 +6,6 @@ import axios from "axios"
 import Conditional from "./Conditional"
 
 const Search = ({ history }) => {
-    //state variable 
     const [lookingAnswer, setAnswer] = useState("");
     const [pokeType, setType] = useState("");
     const [rarity, setRarity] = useState("");
@@ -143,7 +142,6 @@ const Search = ({ history }) => {
                   <Card key={card.id} id={card.id} name={card.name} image={card.imageUrl} />
                 ))}
             </div>
-            {/* <EditorPick /> */}
           </section>
           </main>
           </div>
