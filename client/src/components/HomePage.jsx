@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import pokemon from './pokemon.mp4'
 import pokemontheme from './pokemontheme.mp3'
 
 
