@@ -14,9 +14,11 @@ const CardPage = ()=>{
     //    console.log(response)
     }
     fetchData()
-    }, []);
+}, []);
 
-    let echoice = ["xy0-14","xy7-4","pl2-103","dp6-90","dp1-6","xy0-28","xy0-29","xy0-30","det1-6","col1-4","base1-49","base6-3","gym2-29","base4-2","bw4-25","base4-10","hgss1-4","swsh2-25","sm10-158","hgss1-82","swsh2-85","pl3-70","ex1-7","dp2-102"]
+let echoice = ["xy0-14","xy7-4","pl2-103","dp6-90","dp1-6","xy0-28","xy0-29","xy0-30","det1-6","col1-4","base1-49","base6-3","gym2-29","base4-2","bw4-25","base4-10","hgss1-4","swsh2-25","sm10-158","hgss1-82","swsh2-85","pl3-70","ex1-7","dp2-102"]
+    
+
     const rando1 = echoice[Math.floor(Math.random() * echoice.length)];
     const rando2 = echoice[Math.floor(Math.random() * echoice.length)];
     const rando3 = echoice[Math.floor(Math.random() * echoice.length)];
@@ -24,7 +26,7 @@ const CardPage = ()=>{
     const rando5 = echoice[Math.floor(Math.random() * echoice.length)];
     const rando6 = echoice[Math.floor(Math.random() * echoice.length)];
     const rando7 = echoice[Math.floor(Math.random() * echoice.length)];
-    const rando8 = echoice[Math.floor(Math.random() * echoice.length)];
+    const rando8 = echoice[Math.floor(Math.random() * echoice.length)]; 
 
     const[randoData1, setrandoData1]= useState({});
     useEffect(() => {
@@ -130,7 +132,6 @@ const CardPage = ()=>{
             <img className="item" src={(randoData6.imageUrl && randoData6.imageUrl)} height="100" width="100"/>
             <img className="item" src={(randoData7.imageUrl && randoData7.imageUrl)} height="100" width="100"/>
             <img className="item" src={(randoData8.imageUrl && randoData8.imageUrl)} height="100" width="100"/>
-            <button><img /></button>
         </div>      
     </div>
     </>
