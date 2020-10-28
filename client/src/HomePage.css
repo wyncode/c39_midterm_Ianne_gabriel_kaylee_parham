@@ -42,7 +42,7 @@
   justify-content: center;
 }
 
-.psyPokemon{
+.waterPokemon{
     object-fit:contain;
     display: flex;
     cursor: pointer;
@@ -50,7 +50,7 @@
     width: auto;
 }
 
-.poisonPokemon{
+.firePokemon{
   object-fit:contain;
   display: flex;
   cursor: pointer;
@@ -58,7 +58,7 @@
   width: auto;
 }
 
-.grassPokemon{
+.lightingPokemon{
     object-fit:contain;
     display: flex;
     cursor: pointer;
@@ -218,17 +218,17 @@ audio{
 margin: -2.5rem;
 }
 
-.psyPokemon{
+.waterPokemon{
   height: 10rem;
   width: auto;
 }
 
-.grassPokemon{
+.lightingPokemon{
   height: 10rem;
   width: auto;
 }
 
-.poisonPokemon{
+.firePokemon{
   height: 10rem;
   width: auto;
 }
