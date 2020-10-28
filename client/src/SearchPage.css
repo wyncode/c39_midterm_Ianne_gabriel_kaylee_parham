@@ -48,7 +48,7 @@ main {
   grid-area: main;
 }
 
-main h2 {
+main h1 {
   margin: 1em 0 0.25em 0;
   font-family: "Pokemon Hollow";
   letter-spacing: 3px;
@@ -61,7 +61,6 @@ section {
 
 /* SEARCH */
 
-
 form {
   width: 80vw;
   display: flex;
@@ -70,15 +69,43 @@ form {
   margin-bottom: 0.5em;
 }
 
+form ul {
+  padding-left: 0px;
+}
+
 .search-input{
   width: 15rem;
   font-family: "Pokemon GB";
   font-size: 1em;
-  line-height: 3em;
+  line-height: 4em;
   height: 3em;
 }
 
+.search-input::placeholder{
+  overflow: visible;
+}
+
+
 /* DROP DOWN BUTTONS */
+
+#dropMain {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  border: solid blue 1px;
+  border-radius: 2px;
+  font-size: 1em;
+  font-family: "Pokemon";
+  letter-spacing: 3px;
+  padding: 0.5em;
+}
+
+#dropMainHead {
+  text-align: center;
+  width: 12em;
+  margin: 0s.5rem 0px;
+}
+
 
 .dropdown {
   position: relative;
@@ -87,11 +114,12 @@ form {
   font-size: 1em;
   font-family: "Pokemon";
   letter-spacing: 3px;
+  margin: 0em 0.5em 0em 0.5em;
 }
 
 .drop-heading {
   text-align: center;
-  width: 4em;
+  width: 6em;
   margin: 0.5rem 0px;
 }
 
@@ -112,7 +140,7 @@ form {
 
 label{
   background-color: white;
-  border-bottom: solid gray 2px;
+  border: solid #FFDE00 2px;
   padding: 1em 1em;
 }
 
@@ -122,13 +150,13 @@ label{
   color: white;
 }
 
-.spanBtn {
+/* .spanBtn {
   text-align: end;
   height: 3em;
   background-color: #FFDE00;
-}
+} */
 
-.spanBtn input {
+/* .spanBtn input {
   padding: 0.75em;
   margin: 5px;
   background-color: white;
@@ -140,7 +168,7 @@ label{
 
 .spanBtn input {
   cursor: pointer;
-}
+} */
 /* CARD CONTAINER */
 
 .card-container {
