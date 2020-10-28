@@ -4,16 +4,16 @@ import pokemontheme from './pokemontheme.mp3'
 
 
 function HomePage({ history }) {
-    const [venaData, setVenaData] = useState({});
+    const [pikaData, setPikaData] = useState({});
     const [duckData, setDuckData] = useState({});
-    const [genData, setGenData] = useState({});
+    const [dogData, setDogData] = useState({});
     
     useEffect(() => {
         const fetchData = async () => {
           let response = await axios.get(
-            `https://api.pokemontcg.io/v1/cards/ex14-28`
+            `https://api.pokemontcg.io/v1/cards/xyp-XY174`
           );
-          setVenaData(response.data);
+          setPikaData(response.data);
         };
          fetchData();
       }, []);
@@ -32,17 +32,27 @@ function HomePage({ history }) {
 
     useEffect(() => {
       const fetchData2 = async () => {
-        let gengar = await axios.get(
-            `https://api.pokemontcg.io/v1/cards/sm9-53`
+        let dog = await axios.get(
+          `https://api.pokemontcg.io/v1/cards/ecard3-3`
           );
-        setGenData(gengar.data);
+        setDogData(dog.data);
       };
        fetchData2();
     }, []);
-
+    
     const handleClick = () => {
       history.push("/search");
     };
+    const handleClick2 = () => {
+      history.push("/card/ecard3-3");
+    };
+    const handleClick3 = () => {
+      history.push("/card/xyp-XY174");
+    };
+    const handleClick4 = () => {
+      history.push("/card/base5-65");
+    };
+    
   return (
           <body className="HomePageBody">
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -52,8 +62,9 @@ function HomePage({ history }) {
             </div>
             <div className='suggestions'>
                 <div className='suggestedPowers'>
-                    <h1 className='powerType' ><button className ='psyPokemon'><img src={(duckData.card && duckData.card.imageUrl)}></img></button></h1> 
-                    <h1 className='powerType' ><button className ='grassPokemon'><img src={(venaData.card && venaData.card.imageUrl)}></img></button></h1> 
+                    <div className='powerType' ><button onClick ={handleClick2}><img className ='firePokemon' src={(dogData.card && dogData.card.imageUrl)}></img></button></div> 
+                    <div className='powerType' ><button onClick ={handleClick3}><img className ='lightingPokemon' src={(pikaData.card && pikaData.card.imageUrl)}></img></button></div>
+                    <div className='powerType' ><button onClick ={handleClick4}><img className ='waterPokemon' src={(duckData.card && duckData.card.imageUrl)}></img></button></div> 
                 </div> 
             </div>
             <div class="icon-bar">
