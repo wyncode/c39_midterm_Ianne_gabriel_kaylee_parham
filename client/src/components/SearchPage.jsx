@@ -4,6 +4,7 @@ import NavBar from './NavBar'
 import EditorPick from "./EditorPick"
 import axios from "axios"
 import Conditional from "./Conditional"
+import Footer from "./Footer"
 
 const Search = ({ history }) => {
     //state variable 
@@ -146,7 +147,9 @@ const Search = ({ history }) => {
             {/* <EditorPick /> */}
           </section>
           </main>
+          <Footer />
           </div>
+          
         </>
       );
     }
