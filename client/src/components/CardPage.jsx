@@ -4,7 +4,7 @@ import './CardPage.css';
 import axios from 'axios';
 import NavBar from './NavBar'
 
-const CardPage = ()=>{
+const CardPage = ({history})=>{
     const[apiData, setApiData]= useState({});
     let { id } =useParams()
 
@@ -108,7 +108,7 @@ let echoice = ["xy0-14","xy7-4","pl2-103","dp6-90","dp1-6",
                                     }
                                     randoFetch8()
                                     }, []);
- 
+
     return ( 
         <>
         <NavBar />
@@ -132,14 +132,14 @@ let echoice = ["xy0-14","xy7-4","pl2-103","dp6-90","dp1-6",
         </div>
 
         <div class="wrapper">
-            <img className="item" src={(randoData1.imageUrl && randoData1.imageUrl)} height="100" width="100"/>
-            <img className="item" src={(randoData2.imageUrl && randoData2.imageUrl)} height="100" width="100"/>
-            <img className="item" src={(randoData3.imageUrl && randoData3.imageUrl)} height="100" width="100"/>
-            <img className="item" src={(randoData4.imageUrl && randoData4.imageUrl)} height="100" width="100"/>
-            <img className="item" src={(randoData5.imageUrl && randoData5.imageUrl)} height="100" width="100"/>
-            <img className="item" src={(randoData6.imageUrl && randoData6.imageUrl)} height="100" width="100"/>
-            <img className="item" src={(randoData7.imageUrl && randoData7.imageUrl)} height="100" width="100"/>
-            <img className="item" src={(randoData8.imageUrl && randoData8.imageUrl)} height="100" width="100"/>
+        <a href = {`/card/${randoData1.id}`}><img  className="item" src={(randoData1.imageUrl && randoData1.imageUrl)} height="100" width="100"/></a>
+        <a href = {`/card/${randoData2.id}`}><img  className="item" src={(randoData2.imageUrl && randoData2.imageUrl)} height="100" width="100"/></a>
+        <a href = {`/card/${randoData3.id}`}><img  className="item" src={(randoData3.imageUrl && randoData3.imageUrl)} height="100" width="100"/></a>
+        <a href = {`/card/${randoData4.id}`}><img  className="item" src={(randoData4.imageUrl && randoData4.imageUrl)} height="100" width="100"/></a>
+        <a href = {`/card/${randoData5.id}`}><img  className="item" src={(randoData5.imageUrl && randoData5.imageUrl)} height="100" width="100"/></a>
+        <a href = {`/card/${randoData6.id}`}><img  className="item" src={(randoData6.imageUrl && randoData6.imageUrl)} height="100" width="100"/></a>
+        <a href = {`/card/${randoData7.id}`}><img  className="item" src={(randoData7.imageUrl && randoData7.imageUrl)} height="100" width="100"/></a>
+        <a href = {`/card/${randoData8.id}`}><img  className="item" src={(randoData8.imageUrl && randoData8.imageUrl)} height="100" width="100"/></a>
         </div>      
     </div>
     </>
