@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap);
 @import url(https://db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
-@import url(//db.onlinewebfonts.com/c/831e1f4da157d96bc996f8c9f5f1e578?family=Pokemon+GB);
+
 
 .main{
 background-color: #e63946;
@@ -49,12 +49,12 @@ top: 700px;
 left: 25%;
 height: 210px;
 overflow-x: scroll;
-justify-content: center;
 border: 5px groove black;
 border-radius: 3%;
-min-width: 700px;
-max-width: 700px;
+min-width: 500px;
+max-width: 500px;
 box-shadow: 10px 5px 5px gray;
+
 }
 
 .wrapper .item{
@@ -63,7 +63,8 @@ justify-content: space-around;
 width: 150px;
 height: 190px;
 padding: 1px;
-object-fit: contain;
+Object-fit: contain;
+
 }
 .wrapper .item:hover{
     display: flex;
