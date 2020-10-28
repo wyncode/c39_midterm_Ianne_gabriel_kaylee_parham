@@ -1,7 +1,16 @@
-@import url(https://db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
-@import url(https://db.onlinewebfonts.com/c/831e1f4da157d96bc996f8c9f5f1e578?family=Pokemon+GB);
-@import url(https://db.onlinewebfonts.com/c/6e5393a64ca23c455e8568d409e82da6?family=Pokemon+Hollow);
-@import url(https://db.onlinewebfonts.com/c/36d26dbcd032a9d91d891c9f22dfdec6?family=Pokemon+Solid);
+@import url("https://db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon");
+@import url("https://db.onlinewebfonts.com/c/831e1f4da157d96bc996f8c9f5f1e578?family=Pokemon+GB");
+@import url("https://db.onlinewebfonts.com/c/6e5393a64ca23c455e8568d409e82da6?family=Pokemon+Hollow");
+@import url("https://db.onlinewebfonts.com/c/36d26dbcd032a9d91d891c9f22dfdec6?family=Pokemon+Solid");
+
+/* CSS FONT ATTEMPTS */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* font-family: 'Press Start 2P', cursive; --> adding to search bar line 82 */ 
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+/* backup for nav bar */
+@import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
+/* backup for cards and hover drop */
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 /* Ianne's CSS */
 body {
@@ -14,34 +23,40 @@ body {
     display: flex;
     list-style-type: none;
     justify-content: flex-end;
-    align-items: center;
-    padding: 0.5em 0.5em 0.5em 0px;
+    align-items: center; 
+    padding: 0.5em 0.5em 0em 0px;
     color: white;
     border-bottom: solid black 2px;
     margin: 0;
-    background-color: #3D7DCA;
-    font-family: "Pokemon";
+    background-color: #003A70;
+    font-family: 'Rubik Mono One', sans-serif;;
     letter-spacing: 3px;
 }
 
 .nav .nav-icon{
   margin-right: auto;
   font-size: 1.7em;
+  font-family: "Pokemon", "Shojumaru", cursive
 }
 
 .nav li {
-    margin: 0em 1em 0em 1em;
+    margin: 0em 1em 0em 0.5em;
 }
 
 
 
 /* GRID ATTEMPT */
 .search-container {
+  width: 100vw;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
   grid-template-areas: 
   ". main ."
   ;
+  background-image: url("https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/sword-shield/pokemon-in-the-wild.png");
+  background-repeat: no-repeat; 
+  background-size: cover;
 }
 
 main {
@@ -50,7 +65,10 @@ main {
 
 main h1 {
   margin: 1em 0 0.25em 0;
-  font-family: "Pokemon Hollow";
+  font-family: "Shojumaru", cursive ;
+  color: #FFCB05;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 15em;
   letter-spacing: 3px;
   font-size: 2.5em;
 }
@@ -75,7 +93,7 @@ form ul {
 
 .search-input{
   width: 15rem;
-  font-family: "Pokemon GB";
+  font-family:"Pokemon GB", "Press Start 2P";
   font-size: 1em;
   line-height: 4em;
   height: 3em;
@@ -91,11 +109,11 @@ form ul {
 #dropMain {
   position: relative;
   display: inline-block;
-  background-color: white;
-  border: solid blue 1px;
+  background: rgba(255, 255, 255, 0.7);
+  border: solid #3D7DCA 3px;
   border-radius: 2px;
   font-size: 1em;
-  font-family: "Pokemon";
+  font-family: "Pokemon", "Staatliches";
   letter-spacing: 3px;
   padding: 0.5em;
 }
@@ -110,11 +128,13 @@ form ul {
 .dropdown {
   position: relative;
   display: inline-block;
-  background-color: #FF0000;
+  border: solid #ee1515 2px;
+  background-color: white;
   font-size: 1em;
-  font-family: "Pokemon";
+  font-family: "Pokemon", "Staatliches";
   letter-spacing: 3px;
   margin: 0em 0.5em 0em 0.5em;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .drop-heading {
@@ -127,7 +147,7 @@ form ul {
   display: none;
   width: 15em;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.7);
   min-width: 3em;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -139,7 +159,7 @@ form ul {
 }
 
 label{
-  background-color: white;
+  background: rgba(255, 255, 255, 0.9);
   border: solid #FFDE00 2px;
   padding: 1em 1em;
 }
@@ -150,25 +170,6 @@ label{
   color: white;
 }
 
-/* .spanBtn {
-  text-align: end;
-  height: 3em;
-  background-color: #FFDE00;
-} */
-
-/* .spanBtn input {
-  padding: 0.75em;
-  margin: 5px;
-  background-color: white;
-  border: none;
-  color:#B3A125;
-  border-radius: 2px;
-  font-weight: 700;
-}
-
-.spanBtn input {
-  cursor: pointer;
-} */
 /* CARD CONTAINER */
 
 .card-container {
@@ -178,6 +179,7 @@ label{
     border: solid black 2px;
     overflow: auto;
     height: 70vh;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 /* CSS HOVER OVERLAY */
@@ -224,7 +226,7 @@ img {
     background-color: red;
     border-radius: 2px;
     color: white;
-    font-family: "Pokemon";
+    font-family: "Pokemon", "Staatliches";
     letter-spacing: 5px;
     font-size: 2rem;
     padding: 0.5em 1em;

@@ -7,13 +7,25 @@ import Conditional from "./Conditional"
 
 const Search = ({ history }) => {
     //state variable 
-    const [lookingAnswer, setAnswer] = useState("hello");
+    const [lookingAnswer, setAnswer] = useState("");
     const [pokeType, setType] = useState("");
     const [rarity, setRarity] = useState("");
     const [subType, setSubType] = useState("");
     const [api, setApi] = useState({});
     const [search, setSearch] = useState("");
     const [addition, setAddition] = useState(null);
+
+    if (!lookingAnswer) {
+      let landing = async () => {
+        const response = await axios.get(
+          `https://api.pokemontcg.io/v1/cards?name=pikachu`
+        );
+        const { data } = response;
+        setApi(data);
+      }
+      landing()
+    }
+    
 
     useEffect(() => {
         const getMe = async () => {
@@ -131,7 +143,7 @@ const Search = ({ history }) => {
                   <Card key={card.id} id={card.id} name={card.name} image={card.imageUrl} />
                 ))}
             </div>
-            <EditorPick />
+            {/* <EditorPick /> */}
           </section>
           </main>
           </div>

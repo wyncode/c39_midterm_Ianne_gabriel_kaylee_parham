@@ -10,13 +10,7 @@ const Energy = (props) => {
   };
 
   return (
-    // **************
-    // ENERGY SUBTYPE && TRAINER RARITY
-    // **************
     <>
-      {/******************************/}
-      {/* SUBTYPE */}
-      {/*************************/}
       <div className="dropdown">
         <h3 className="drop-heading"> Subtype </h3>
         <div className="dropdown-content" name="subType">
@@ -42,15 +36,8 @@ const Energy = (props) => {
             />{" "}
             Basic{" "}
           </label>
-          <div className="spanBtn" htmlFor="">
-            {" "}
-            <input type="submit" name="looking" />{" "}
-          </div>
         </div>
       </div>
-      {/* **************************** */}
-      {/* RARITY */}
-      {/* *********************** */}
       <div className="dropdown">
         <h3 className="drop-heading"> Rarity </h3>
         <div className="dropdown-content" name="rarity">
@@ -98,10 +85,6 @@ const Energy = (props) => {
             />{" "}
             Rare Holo{" "}
           </label>
-          <div className="spanBtn" htmlFor="">
-            {" "}
-            {/* <input type="submit" name="looking" />{" "} */}
-          </div>
         </div>
       </div>
     </>
