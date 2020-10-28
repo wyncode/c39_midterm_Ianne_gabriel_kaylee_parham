@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-
+import pokemon from './pokemon.mp4'
+import pokemontheme from './pokemontheme.mp3'
 
 
 function HomePage({ history }) {
@@ -63,9 +64,7 @@ function HomePage({ history }) {
                 <a href="https://www.youtube.com/channel/UCFctpiB_Hnlk3ejWfHqSm6Q" class="youtube"><i class="fa fa-youtube"></i></a>
             </div>
             <div className="music">
-              {/* <audio controls="controls" autoplay preload='auto' loop id="myAudio">
-              <source src="Pokémon Theme Song.mp3" type="audio/mpeg" /></audio> */}
-                {/* <audio controls="controls"><source src="Pokémon Theme Song.mp3" type="audio/mpeg" /></audio> */}
+              <audio autoPlay controls ='autoPlay' src={pokemontheme} /> 
             </div>
           </body>
         );
