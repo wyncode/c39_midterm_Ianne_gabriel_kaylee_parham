@@ -1,15 +1,21 @@
+@import url('https://db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon');
+@import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
+
+
 .HomePageBody {
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
     background-image: url("./Images/pokemon.png");
-    background-size: 100%;
-    font-family: 'Pokemon';
+    background-repeat: no-repeat;
+    font-family: 'Pokemon', "Shojumaru";
     letter-spacing: 2px;
+    margin: 0 auto;
+    background-size: cover;
 }
 
    .openButton {
-    position: absolute;
+    position: fixed;
     top: 45%;
     left: 20%;
     background:url(./Images/pokeball1.png) no-repeat;
@@ -18,28 +24,54 @@
     width:20rem;
     height:20rem;
     border-radius: 50%;
+    margin: 0 auto;
 }
 
 .suggestedPowers{
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    right: 3.5%;
-    top: 2%;  
+    right: 8%;
+    top: 10%;  
+    height:2rem;
+}
+
+.powerType{
+  margin: -3rem;
+  display: flex;
+  justify-content: center;
 }
 
 .psyPokemon{
+    object-fit:contain;
+    display: flex;
     cursor: pointer;
+    height: 18rem;
+    width: auto;
+}
+
+.poisonPokemon{
+  object-fit:contain;
+  display: flex;
+  cursor: pointer;
+  height: 18rem;
+  width: auto;
 }
 
 .grassPokemon{
+    object-fit:contain;
+    display: flex;
     cursor: pointer;
+    height: 18rem;
+    width: auto;
 }
 
 .letter{
     display: inline-block;
-    position: absolute;
-    top: 15%;
-    left: 13%;
-    font-size: 6rem;
+    position: fixed;
+    top: 4%;
+    left: 9%;
+    font-size: 8rem;
     transform-origin: bottom center;
 }
 
@@ -65,12 +97,12 @@ span {
 
 audio{
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 1rem;
-  left: 24rem;
+  left: 20%;
   height: 1.5rem;
-  
 }
+
 audio::-webkit-media-controls-play-button,
 audio::-webkit-media-controls-panel {
   background-color: red;
@@ -136,5 +168,69 @@ audio::-webkit-media-controls-panel {
     color: white;
 }
 
-@import url(https://db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+@media screen and (max-width: 1350px) {
+  .HomePageBody{
+    background-size: cover;
+  }
 
+  .letter{
+    display: inline-block;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    font-size: 4rem;
+    transform-origin: bottom center;
+}
+
+.openButton {
+  top: 50%;
+  left: 22%;
+  background:url(./Images/pokeball1.png) no-repeat;
+  background-size: 10rem;
+  border:2px solid black;
+  width:10rem;
+  height:10rem;
+}
+
+.icon-bar {
+  top: 59%;
+}
+
+.icon-bar a {
+  
+  font-size: 20px;
+}
+audio{
+  display: flex;
+  position: fixed;
+  bottom: .5rem;
+  left: 15%;
+  height: 1rem;
+}
+
+.suggestedPowers{
+  right: 9%;
+  top: 15%;  
+  height:2rem;
+  
+}
+.powerType{
+margin: -2.5rem;
+}
+
+.psyPokemon{
+  height: 10rem;
+  width: auto;
+}
+
+.grassPokemon{
+  height: 10rem;
+  width: auto;
+}
+
+.poisonPokemon{
+  height: 10rem;
+  width: auto;
+}
+
+}

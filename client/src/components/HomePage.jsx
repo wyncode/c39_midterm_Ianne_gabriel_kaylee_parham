@@ -39,7 +39,7 @@ function HomePage({ history }) {
       };
        fetchData2();
     }, []);
-
+    
     const handleClick = () => {
       history.push("/search");
     };
@@ -52,8 +52,9 @@ function HomePage({ history }) {
             </div>
             <div className='suggestions'>
                 <div className='suggestedPowers'>
-                    <h1 className='powerType' ><button className ='psyPokemon'><img src={(duckData.card && duckData.card.imageUrl)}></img></button></h1> 
-                    <h1 className='powerType' ><button className ='grassPokemon'><img src={(venaData.card && venaData.card.imageUrl)}></img></button></h1> 
+                    <div className='powerType' ><button ><img className ='psyPokemon' src={(duckData.card && duckData.card.imageUrl)}></img></button></div> 
+                    <div className='powerType' ><button ><img className ='grassPokemon' src={(venaData.card && venaData.card.imageUrl)}></img></button></div>
+                    <div className='powerType' ><button ><img className ='poisonPokemon' src={(genData.card && genData.card.imageUrl)}></img></button></div> 
                 </div> 
             </div>
             <div class="icon-bar">
