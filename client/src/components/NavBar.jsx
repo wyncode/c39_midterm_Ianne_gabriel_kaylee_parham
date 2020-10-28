@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-//need to add browser router DOM 
-//need to add link tags around the li 
+
 
 const NavBar = () => {
     return (

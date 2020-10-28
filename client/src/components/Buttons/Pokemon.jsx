@@ -10,9 +10,6 @@ const Pokemon = (props) => {
   };
 
   return (
-    // **************
-    // POKEMON TYPE
-    // **************
     <>
       <div className="dropdown">
         <h3 className="drop-heading"> Type </h3>
@@ -63,9 +60,6 @@ const Pokemon = (props) => {
           </label>
         </div>
       </div>
-      {/* **************************** */}
-      {/* RARITY*/}
-      {/* *********************** */}
       <div className="dropdown">
         <h3 className="drop-heading"> Rarity </h3>
         <div className="dropdown-content" name="rarity">
