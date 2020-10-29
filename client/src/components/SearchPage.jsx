@@ -3,6 +3,7 @@ import Card from './Card'
 import NavBar from './NavBar'
 import axios from "axios"
 import Conditional from "./Conditional"
+import Footer from "./Footer"
 
 const Search = ({ history }) => {
     const [lookingAnswer, setAnswer] = useState("");
@@ -143,7 +144,9 @@ const Search = ({ history }) => {
             </div>
           </section>
           </main>
+          <Footer />
           </div>
+          
         </>
       );
     }
