@@ -1,7 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import Card from './Card'
 import NavBar from './NavBar'
-import EditorPick from "./EditorPick"
 import axios from "axios"
 import Conditional from "./Conditional"
 
